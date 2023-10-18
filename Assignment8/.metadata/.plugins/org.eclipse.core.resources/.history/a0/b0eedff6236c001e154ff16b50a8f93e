@@ -1,0 +1,39 @@
+package com.company;
+
+class Box<T extends Employee>{
+	private T obj;
+	public void set(T val) {
+		this.obj=val;
+	}
+	public T get() {
+		this.obj.calculations();
+		return this.obj;
+	}
+}
+
+public class Tester {
+
+	public static void main(String[] args) {
+
+		
+		Box<Employee> e1=new Box<>();
+		e1.set(new HourlyEmployee("Prasanna","Shekhar","22022002",0.0,0.0));
+		System.out.println(e1.get());
+		
+		Box<Employee> e2=new Box<>();
+		e2.set(new SalariedEmployee("Akhilesh","Varute","22022002",0.0));
+		System.out.println(e2.get());
+		
+		Box<Employee> e3=new Box<>();
+		e3.set(new CommissionEmployee("Pavan","Patil","22022002",0.0,0.0));
+		System.out.println(e3.get());
+		
+		Box<Employee> e4=new Box<>();
+		e4.set(new BaseplusCommissionEmployee("Pavan","Patil","22022002",0.0,0.0,0.0));
+		System.out.println(e4.get());
+
+		
+
+	}
+
+}

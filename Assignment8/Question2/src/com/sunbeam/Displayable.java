@@ -1,0 +1,9 @@
+package com.sunbeam;
+
+public interface Displayable {
+
+//	void acceptData();
+
+	void displayData();
+
+}
